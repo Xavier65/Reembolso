@@ -9,3 +9,4 @@ Entre las cuales:
 2. SqlAlquemy
 3. Uvicorn
 4. Pydantic
+5. jtw

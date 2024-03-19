@@ -1,16 +1,17 @@
-from typing import List
-
-from sqlalchemy import Integer, ForeignKey
-from sqlalchemy.orm import Mapped, mapped_column
+from sqlalchemy import Column, String, Integer, ForeignKey
 from sqlalchemy.orm import relationship
 
 from .base import TimeStampBase
+from app.schemas.repayment import SchemaRepaymentCreate
 
 class Repayment(TimeStampBase):
-    __tablename__ ="repayment"
-    id:Mapped[int] = mapped_column(Integer, primary_key=True)
+    __tablename__ = "repayment"
+    id = Column(Integer,primary_key=True)
+    remark = Column(String(120))
+    
+    user_owner_id = Column(Integer, ForeignKey("user.id"))
+    user_owner = relationship("User", back_populates="repayments")
 
-    repayment_detail:Mapped[List["ReplaymentDetail"]] = relationship(back_populates="repayment")
-
-    user_id:Mapped[int] = mapped_column(ForeignKey("user.id"))
-    user:Mapped["User"] = relationship(back_populates="repayment")
+    def __init__(self, repayment:SchemaRepaymentCreate):
+        self.remark = repayment.remark
+        self.user_owner_id = repayment.user_owner_id
