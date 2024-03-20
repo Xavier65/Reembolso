@@ -2,7 +2,7 @@
 
 ## Ejercicio de App Repayment
 
-Proyecto de Prueba, para poner en practica conocimiento de librerias de python.
+Proyecto de Prueba, para poner en practica conocimiento de librerias de python. 
 Entre las cuales:
 
 1. FastAPi

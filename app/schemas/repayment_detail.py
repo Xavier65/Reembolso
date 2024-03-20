@@ -1,11 +1,6 @@
-from pydantic import BaseModel, ConfigDict
-from pydantic.dataclasses import dataclass
+from pydantic import BaseModel
 from typing import Optional
 
-class MyConfig():
-    config_mode = ConfigDict(from_attributes=True)
-
-@dataclass(config=MyConfig)
 class RepaymentDetail(BaseModel):
     id:int 
     rtn:str 
@@ -16,7 +11,6 @@ class RepaymentDetail(BaseModel):
     tax:float
     repayment_owner_id:int 
 
-@dataclass(config=MyConfig)
 class RepaymentDetailCreate(BaseModel):
     rtn:Optional[str] = None
     cai:Optional[str] = None

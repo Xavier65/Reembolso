@@ -1,13 +1,6 @@
-from pydantic import BaseModel, ConfigDict
-from pydantic.dataclasses import dataclass
+from pydantic import BaseModel
 from typing import Optional
 
-from .repayment import SchemaRepayment
-
-class MyConfig():
-    config_mode = ConfigDict(from_attributes=True)
-
-@dataclass(config=MyConfig)
 class SchemaUser(BaseModel):
     id:int
     first_name:str
@@ -16,7 +9,6 @@ class SchemaUser(BaseModel):
     password:str
     is_active:bool
 
-@dataclass(config=MyConfig)
 class SchemaUserCreate(BaseModel):
     first_name:Optional[str] = None
     last_name:Optional[str] = None

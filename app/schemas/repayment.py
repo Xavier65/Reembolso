@@ -1,11 +1,6 @@
-from pydantic import BaseModel, ConfigDict
-from pydantic.dataclasses import dataclass
+from pydantic import BaseModel
 from typing import Optional
 
-class MyConfig():
-    config_mode = ConfigDict(from_attributes=True)
-
-@dataclass(config=MyConfig)
 class SchemaRepayment(BaseModel):
     id:int
     remark:str 
