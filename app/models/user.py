@@ -24,3 +24,6 @@ class User(TimeStampBase):
 
     def fake_hashed(self, password:str):
         return f"{password}hashed"
+
+    def __repr__(self) -> str:
+        return f"User(id:{self.id},email:{self.email},is_active:{self.is_active})"

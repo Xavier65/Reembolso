@@ -15,7 +15,6 @@ class SchemaUser(BaseModel):
     email:str
     password:str
     is_active:bool
-    repayments:list[SchemaRepayment] = []
 
 @dataclass(config=MyConfig)
 class SchemaUserCreate(BaseModel):

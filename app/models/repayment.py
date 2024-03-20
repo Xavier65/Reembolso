@@ -12,6 +12,8 @@ class Repayment(TimeStampBase):
     user_owner_id = Column(Integer, ForeignKey("user.id"))
     user_owner = relationship("User", back_populates="repayments")
 
+    repayment_details = relationship("RepaymentDetail", back_populates="repayment_owner")
+
     def __init__(self, repayment:SchemaRepaymentCreate):
         self.remark = repayment.remark
         self.user_owner_id = repayment.user_owner_id

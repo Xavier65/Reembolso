@@ -15,7 +15,7 @@ def create_user(user:SchemaUserCreate,db:Session = Depends(get_db)):
         raise HTTPException(status_code=202, detail=f"User:{user.first_name} {user.last_name} created!")
     raise HTTPException(status_code=404, detail="User not created!")
 
-@router.get("/read/{user_email}")
+@router.get("/find/{user_email}")
 def get_user_by_email(user_email:str, db:Session = Depends(get_db)):
     db_user = handler_user.find_by_email(db, user_email)
     if db_user is None:
