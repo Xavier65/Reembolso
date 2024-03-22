@@ -6,4 +6,3 @@ client = TestClient(
     app=server,
     headers={'accept':'application/json'}
 )
-

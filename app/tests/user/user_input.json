@@ -1,0 +1,55 @@
+{
+  "input": [
+    {
+      "first_name": "firstname",
+      "last_name": "primero",
+      "email": "first@mail.com",
+      "password": "firstpass01"
+    },
+    {
+      "first_name": "secondname",
+      "last_name": "segundo",
+      "email": "second@mail.com",
+      "password": "secondpass02"
+    },
+    {
+      "first_name": "threethname",
+      "last_name": "tercero",
+      "email": "threeth@mail.com",
+      "password": "threethpass03"
+    },
+    {
+      "first_name": "fourthname",
+      "last_name": "cuarto",
+      "email": "fourth@mail.com",
+      "password": "fourthpass04"
+    },
+    {
+      "first_name": "fifthname",
+      "last_name": "quinto",
+      "email": "fifthname@mail.com",
+      "password": "fifthpass05"
+    }
+  ],
+  "update":[
+    {
+      "first_name": "firsthname",
+      "email": "first@mail.com"
+    },
+    {
+      "last_name": "Segundo",
+      "email": "second@mail.com"
+    },
+    {
+      "email": "threeth@mail.com",
+      "password": "threethpass033"
+    },
+    {
+      "email": "fourth@mail.com",
+      "is_active":false
+    },
+    {
+      "email": "fifthname@mail.com"
+    }
+  ] 
+}
